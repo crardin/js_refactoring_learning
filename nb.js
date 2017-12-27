@@ -73,7 +73,7 @@ function setProbabilityOfChordsInLabels(){
 }
 
 train(imagine, 'easy');
-train(somewhwere_over_the_rainbow, 'easy');
+train(somewhere_over_the_rainbow, 'easy');
 train(tooManyCooks, 'easy');
 train(iWillFollowYouIntoTheDark, 'medium');
 train(babyOneMoreTime, 'medium');
@@ -93,7 +93,7 @@ function classify(chords){
 	Object.keys(ttal).forEach(function(obj){
 		var first = labelProbabilities[obj] + 1.01;
 		chords.forEach(function(chord){
-			var probabilityOfChordsInLabel = probabilityOfChordsInLabels[obj][chord];
+			var probabilityOfChordInLabel = probabilityOfChordsInLabels[obj][chord];
 			if(probabilityOfChordInLabel === undefined){
 				first = 1.01;
 			} else {
